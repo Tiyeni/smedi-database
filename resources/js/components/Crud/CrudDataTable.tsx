@@ -632,7 +632,7 @@ export function CrudDataTable<T extends { id: number }>({
 
         <div className="rounded-md border overflow-hidden">
           <div className="overflow-x-auto max-h-[600px] overflow-y-auto">
-            <Table className="w-full min-w-full">
+            <Table className="w-full min-w-full bg-card">
               <TableHeader className="bg-muted/50 sticky top-0 z-10">
                 {table.getHeaderGroups().map((headerGroup) => (
                   <TableRow key={headerGroup.id}>

@@ -854,23 +854,6 @@ export function CrudPage<T extends { id: number }>({
 
     const activeFilterCount = customFilterCount + dynamicFilterCount;
 
-    // Debug logging for filter state
-    React.useEffect(() => {
-        console.log('🔍 Filter state debug:', {
-            currentURL: window.location.href,
-            parsedDynamicFilter,
-            appliedDynamicFilter,
-            activeFilters,
-            customFilterCount,
-            dynamicFilterCount,
-            activeFilterCount,
-            filterMetadata,
-            filterMetadataLoading,
-            shouldShowBadges: !!(appliedDynamicFilter || Object.keys(activeFilters).some(key => activeFilters[key] !== undefined && activeFilters[key] !== '' && activeFilters[key] !== '__all__'))
-        });
-    }, [parsedDynamicFilter, appliedDynamicFilter, activeFilters, customFilterCount, dynamicFilterCount, activeFilterCount, filterMetadata, filterMetadataLoading]);
-
-    // Keyboard shortcuts
     React.useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             // Cmd/Ctrl + C to create new

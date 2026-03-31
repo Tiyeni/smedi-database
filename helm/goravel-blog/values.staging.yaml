@@ -27,14 +27,14 @@ ingress:
     # Disable request buffering for streaming
     nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
   hosts:
-    - host: smedi.dartsmw.com
+    - host: smedi.nxtgenlabs.mw
       paths:
         - path: /
           pathType: Prefix
   tls:
-    - secretName: smedi-dartsmw-tls
+    - secretName: smedi-nxtgenlabs-tls
       hosts:
-        - smedi.dartsmw.com
+        - smedi.nxtgenlabs.mw
 
 resources:
   limits:
@@ -57,7 +57,7 @@ app:
   name: "[STG] SMEDI Database"
   env: "staging"
   debug: true
-  url: "https://smedi.dartsmw.com"
+  url: "https://smedi.nxtgenlabs.mw"
 
   # Auth configuration
   auth:
